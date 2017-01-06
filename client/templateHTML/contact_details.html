@@ -1,35 +1,35 @@
 <template name="contact_details">
-	<div class="panel panel-default">
-		<div class="panel-heading clearfix">
-			<h3 class="panel-title pull-left">Fiche élève</h3>
-			<a class="btn btn-primary pull-right hidden-xs"
-				data-toggle="modal"
-				data-target="#editStudentModal">
-				<span>Editer</span>
-			</a>
-		</div>
-		<div class="list-group">
-			<div class="list-group-item">
-				<img src="/images/JulienDaSilva.jpg" class="img-rounded pull-left"/>
-				<label>Élève</label>
-				<h4 class="list-group-item-heading">{{eleveSelected.prenom}} {{eleveSelected.nom}}</h4>
-			</div>
-			<div class="list-group-item">
-				<label>Classe et groupe</label>
-				<h4 class="list-group-item-heading">{{eleveSelected.classe}} - {{eleveSelected.groupe}}</h4>
-			</div>
-			<div class="list-group-item">
-				<label>Adresse mail</label>
-				<h4 class="list-group-item-heading">{{eleveSelected.mail}}</h4>
-			</div>
-			<div class="list-group-item">
-				<label>Age</label>
-				<h4 class="list-group-item-heading">{{eleveSelected.age}}</h4>
-			</div>
-			<div class="list-group-item">
-				<label>Spécialité</label>
-				<h4 class="list-group-item-heading">{{eleveSelected.specialite}}</h4>
-			</div>
-		</div>	
-	</div>
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h3 class="panel-title pull-left">Fiche élève</h3>
+      <a class="btn btn-primary pull-right hidden-xs"
+         data-toggle="modal"
+         data-target="#editStudentModal">
+        <span>Editer</span>
+      </a>
+    </div>
+    <div class="list-group">
+      <div class="list-group-item">
+        <img src="/images/JulienDaSilva.jpg" class="img-rounded pull-left"/>
+        <label>Élève</label>
+        <h4 class="list-group-item-heading">{{eleveSelected.prenom}} {{eleveSelected.nom}}</h4>
+      </div>
+      <div class="list-group-item">
+        <label>Classe et groupe</label>
+        <h4 class="list-group-item-heading">{{eleveSelected.classe}} - {{eleveSelected.groupe}}</h4>
+      </div>
+      <div class="list-group-item">
+        <label>Adresse mail</label>
+        <h4 class="list-group-item-heading">{{eleveSelected.mail}}</h4>
+      </div>
+      <div class="list-group-item">
+        <label>Age</label>
+        <h4 class="list-group-item-heading">{{eleveSelected.age}}</h4>
+      </div>
+      <div class="list-group-item">
+        <label>Spécialité</label>
+        <h4 class="list-group-item-heading">{{eleveSelected.specialite}}</h4>
+      </div>
+    </div>
+  </div>
 </template>

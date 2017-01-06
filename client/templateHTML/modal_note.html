@@ -1,56 +1,58 @@
-<template name="modal_note">  
-  <div class="modal fade" id="addNoteModal" tabindex="-1" role="dialog" aria-labelledby="addNoteModal" aria-hidden="true" style="display: none;">
+<template name="modal_note">
+  <div class="modal fade" id="addNoteModal" tabindex="-1" role="dialog" aria-labelledby="addNoteModal"
+       aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
       <form class="form-horizontal">
         <div class="modal-header">
 
-            <div class="btn-group pull-left">
-              <button class="btn btn-danger" data-dismiss="modal">
-                Annuler
-              </button>
-            </div>
-          
-            <div class="btn-group pull-right">
-              <button class="btn btn-success" data-dismiss="modal" id="enregister">
-                Enregistrer
-              </button>
-            </div>
+          <div class="btn-group pull-left">
+            <button class="btn btn-danger" data-dismiss="modal">
+              Annuler
+            </button>
+          </div>
+
+          <div class="btn-group pull-right">
+            <button class="btn btn-success" data-dismiss="modal" id="enregister">
+              Enregistrer
+            </button>
+          </div>
           <h4 class="modal-title">
-              Ajouter une note
-          </h4>   
+            Ajouter une note
+          </h4>
         </div>
         <div class="modal-body">
-            <input type="hidden" name="companyId" value="">
-            <input type="hidden" name="_method" value="put">
-            <div class="form-group">
-              <label class="col-xs-4 control-label">Note</label>
-              <div class="col-xs-8">
-                <input id="inputNote" type="number" min="0" max="20" name="note" class="form-control" placeholder="Note sur 20" value="">
-              </div>
+          <input type="hidden" name="companyId" value="">
+          <input type="hidden" name="_method" value="put">
+          <div class="form-group">
+            <label class="col-xs-4 control-label">Note</label>
+            <div class="col-xs-8">
+              <input id="inputNote" type="number" min="0" max="20" name="note" class="form-control"
+                     placeholder="Note sur 20" value="">
             </div>
-            <div class="form-group">
-              <label class="col-xs-4 control-label">Matière</label>
-              <div class="col-xs-8">
-                <select name="select" id="inputMatiere">
-                  <option id="value1" value="JavaScript">JavaScript</option> 
-                  <option id="value2" value="PHP">PHP</option>
-                  <option id="value3" value="UX Design">UX Design</option>
-                  <option id="value4" value="UI Design">UI Design</option> 
-                  <option id="value5" value="Gestion de projet">Gestion de projet</option>
-                  <option id="value6" value="Marketing">Marketing</option>
-                </select>
-              </div>
-            </div>  
-            <div class="form-group">
-              <label class="col-xs-4 control-label">Trimestre</label>
-              <div class="col-xs-8">
-                <select name="select" id="inputTrimestre">
-                  <option id="value1" value="1">1er trimestre</option> 
-                  <option id="value2" value="2">2e trimestre</option>
-                  <option id="value3" value="3">3e trimestre</option>
-                </select>
-              </div>
-            </div>                
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 control-label">Matière</label>
+            <div class="col-xs-8">
+              <select name="select" id="inputMatiere">
+                <option id="value1" value="JavaScript">JavaScript</option>
+                <option id="value2" value="PHP">PHP</option>
+                <option id="value3" value="UX Design">UX Design</option>
+                <option id="value4" value="UI Design">UI Design</option>
+                <option id="value5" value="Gestion de projet">Gestion de projet</option>
+                <option id="value6" value="Marketing">Marketing</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 control-label">Trimestre</label>
+            <div class="col-xs-8">
+              <select name="select" id="inputTrimestre">
+                <option id="value1" value="1">1er trimestre</option>
+                <option id="value2" value="2">2e trimestre</option>
+                <option id="value3" value="3">3e trimestre</option>
+              </select>
+            </div>
+          </div>
         </div>
       </form>
     </div>

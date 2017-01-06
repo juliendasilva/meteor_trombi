@@ -1,25 +1,25 @@
 <template name="notes">
-	<div>
-		<div class="panel panel-default">
-			<div class="panel-heading clearfix">
-				<h3 class="panel-title pull-left">Notes</h3>
-				<div class="btn-group pull-right">
-					<a class="btn btn-primary"
-						data-toggle="modal"
-						data-target="#addNoteModal">
-							<span>Ajouter</span>
-					</a>
-				</div>							
-			</div>					
-			<div class="list-group">
-				    {{#each list_notes}}
-				    	<a class="list-group-item pjax">
-							<h4 class="list-group-item-heading">{{this.note}}/20</h4>
-							<p class="list-group-item-text">{{this.matiere}}, {{this.trimestre}}e trimestre</p>
-							<a id="supp" href="">Supprimer</a>
-						</a>
-				    {{/each}}
-			</div>		
-		</div>
-	</div>
+  <div>
+    <div class="panel panel-default">
+      <div class="panel-heading clearfix">
+        <h3 class="panel-title pull-left">Notes</h3>
+        <div class="btn-group pull-right">
+          <a class="btn btn-primary"
+             data-toggle="modal"
+             data-target="#addNoteModal">
+            <span>Ajouter</span>
+          </a>
+        </div>
+      </div>
+      <div class="list-group">
+        {{#each list_notes}}
+          <a class="list-group-item pjax">
+            <h4 class="list-group-item-heading">{{this.note}}/20</h4>
+            <p class="list-group-item-text">{{this.matiere}}, {{this.trimestre}}e trimestre</p>
+            <a id="supp" href="">Supprimer</a>
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
 </template>
