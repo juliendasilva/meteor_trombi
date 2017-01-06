@@ -14,7 +14,6 @@ Template.modal_edit.events({
     const mail       = template.find("#mail").value;
     const age        = template.find("#age").value;
     const specialite = template.find("#specialite").value;
-    // eleves.insert({prenom: prenom, nom: nom, classe: classe, groupe: groupe, mail: mail, age: age, specialite})
     eleves.update(Session.get('eleveSelected'), {
       $set: {prenom: prenom, nom: nom, classe: classe, groupe: groupe, mail: mail, age: age, specialite}
     });

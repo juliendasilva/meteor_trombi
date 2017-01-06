@@ -1,5 +1,5 @@
 Template.modal.events({
-  'click #enregister'(event, template) {
+  'click #enregisterEleve'(event, template) {
     const prenom     = template.find("#prenom").value;
     const nom        = template.find("#nom").value;
     const classe     = template.find("#classe").value;
