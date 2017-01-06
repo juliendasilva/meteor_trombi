@@ -6,7 +6,6 @@ Template.modal_edit.helpers({
 
 Template.modal_edit.events({
   'click #updateEleve'(event, template) {
-    console.log('ici');
     event.preventDefault();
     const prenom     = template.find("#prenom").value;
     const nom        = template.find("#nom").value;
