@@ -1,0 +1,33 @@
+<template name="contact_list">
+	<div class="col-sm-5 bootcards-list" id="list" data-title="Contacts">
+		<div class="panel panel-default">				
+			<div class="panel-body">
+				<div class="search-form">
+					<div class="row">
+					    <div class="col-xs-9">
+					      <div class="form-group">
+						      <input type="text" class="form-control" placeholder="Rechercher ...">
+					      </div>
+					    </div>
+					    <div class="col-xs-3">
+							<a class="btn btn-primary btn-block" href="/contacts/add"
+								data-toggle="modal"
+								data-target="#editModal">
+								<i class="fa fa-plus"></i> 
+								<span>Ajouter</span>
+							</a>
+					    </div>
+					</div>						    
+				</div>					
+			</div>
+			<div class="list-group">
+				<a class="list-group-item pjax" 
+		 			href="/contacts/VBMJHwcLX3Vx">
+					<img src="../images/VeroniqueChoquet.jpg" class="img-rounded pull-left"/>
+					<h4 class="list-group-item-heading">Véronique Choquet</h4>
+					<p class="list-group-item-text">Groupe 2</p>
+				</a>		
+			</div>
+		</div>
+	</div>	
+</template>
