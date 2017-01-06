@@ -1,8 +1,8 @@
 eleves = new Mongo.Collection("eleves");
 
 let elevesJson = {
-  last_name: 'da silva',
-  first_name: 'julien',
+  nom: 'da silva',
+  prenom: 'julien',
   classe: 'web2',
   groupe: '1',
   photo: 'photo',
