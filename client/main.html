@@ -7,6 +7,7 @@
 
   {{> hello}}
   {{> info}}
+  {{> eleves}}
 </body>
 
 <template name="hello">
@@ -21,5 +22,15 @@
     <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
     <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>
+
+<template name="eleves">
+  <input type="text" id="text">
+  <button id="addValue"></button>
+  <ul>
+    {{#each list_eleve}}
+      <li>{{value}}</li>
+    {{/each}}
   </ul>
 </template>

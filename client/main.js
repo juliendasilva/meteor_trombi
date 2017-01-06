@@ -20,3 +20,15 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
+Template.eleves.helpers({
+  list_eleve: function() {
+    return eleves.find();
+  }
+});
+
+Template.eleves.events({
+  'click #addEleves'(event, instance) {
+    eleves.insert({})
+  },
+});
