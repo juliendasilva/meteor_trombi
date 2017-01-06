@@ -4,7 +4,7 @@
 			<div class="panel-heading clearfix">
 				<h3 class="panel-title pull-left">Notes</h3>
 				<div class="btn-group pull-right">
-					<a class="btn btn-primary" href="/contacts/VBMJHwcLX3Vx/notes/add"
+					<a class="btn btn-primary" id="addNote" href="/contacts/VBMJHwcLX3Vx/notes/add"
 						data-toggle="modal"
 						data-target="#addNoteModal">
 							<span>Ajouter</span>
@@ -12,11 +12,39 @@
 				</div>							
 			</div>					
 			<div class="list-group">
-				<a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
+				<!-- <a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
 					<h4 class="list-group-item-heading">12/20</h4>
 					<p class="list-group-item-text">UX Design, le 02 décembre 2016</p>
-				</a>
+				</a> -->
+				    {{#each list_notes}}
+				    	<a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
+							<h4 class="list-group-item-heading">{{this.note}}/20</h4>
+							<p class="list-group-item-text">{{this.matiere}}, {{this.trimestre}}e trimestre</p>
+							<a id="supp" href="">Supprimer</a>
+						</a>
+				    {{/each}}
 			</div>		
 		</div>
 	</div>
+
+
+ <script>
+//         var notes = [12, 14, 9, 10];
+
+//         for (var i = 0; i < notes.length; i++) {
+//            var flow =
+
+//            '<div class="list-group">
+// 				<a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
+// 					<h4 class="list-group-item-heading">1'+notes[i]+'</h4>
+// 					<p class="list-group-item-text">UX Design, le 02 décembre 2016</p>
+// 				</a>
+// 			</div>	';
+		
+// 			return flow; 
+//         }
+
+
+//     </script>	
+
 </template>
