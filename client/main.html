@@ -4,21 +4,24 @@
 
 <body>
 
-<div class="container bootcards-container" id="main">
-  <div class="row">
-    <h1>Élèves de HETIC WEB2 P2018</h1>
-    {{> contact_list}}
-    <div class="col-sm-7 bootcards-cards hidden-xs" id="listDetails">
-      <div id="contactCard">
-        {{> contact_details}}
-        {{> notes}}
-        {{> notes_data}}
+  <div class="container bootcards-container" id="main">
+    <div class="row">
+      {{> classes}}
+      <h1>Élèves de HETIC WEB2 P2018</h1>
+      {{> contact_list}}
+      <div class="col-sm-7 bootcards-cards hidden-xs" id="listDetails"> 
+       <div id="contactCard">
+         {{> contact_details}}
+         {{> notes}}
+         {{> notes_data}}
+        </div>
       </div>
     </div>
   </div>
-</div>
-{{> add_eleve}}
-<!--{{> modal_edit}}-->
+
+  {{> modal}}
+  {{> modal_edit}}
+  {{> modal_note}}
 
 </body>
 
