@@ -1,6 +1,5 @@
-import 'lib/bootcards.css';
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
+import {Template} from 'meteor/templating';
+import {ReactiveVar} from 'meteor/reactive-var';
 
 import './main.html';
 
@@ -15,23 +14,16 @@ import './main.html';
 //   },
 // });
 
-// <<<<<<< HEAD
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
-});
 
-Template.eleves.helpers({
+Template.contact_list.helpers({
   list_eleve: function() {
     return eleves.find();
   }
 });
 
-Template.eleves.events({
+Template.contact_list.events({
   'click #addEleves'(event, instance) {
     eleves.insert({})
-  },
+  }
 });
 
