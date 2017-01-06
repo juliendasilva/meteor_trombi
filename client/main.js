@@ -21,6 +21,13 @@ Template.contact_list.helpers({
   }
 });
 
+Template.notes.helpers({
+  list_notes: function() {
+  	var notes = [12, 14, 9, 10];
+    return notes;
+  }
+});
+
 Template.contact_list.events({
   'click #addEleves'(event, instance) {
     eleves.insert({})

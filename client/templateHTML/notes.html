@@ -12,11 +12,38 @@
 				</div>							
 			</div>					
 			<div class="list-group">
-				<a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
+				<!-- <a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
 					<h4 class="list-group-item-heading">12/20</h4>
 					<p class="list-group-item-text">UX Design, le 02 décembre 2016</p>
-				</a>
+				</a> -->
+				    {{#each list_notes}}
+				    	<a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
+							<h4 class="list-group-item-heading">{{this}}/20</h4>
+							<p class="list-group-item-text">UX Design, le 02 décembre 2016</p>
+						</a>
+				    {{/each}}
 			</div>		
 		</div>
 	</div>
+
+
+ <script>
+//         var notes = [12, 14, 9, 10];
+
+//         for (var i = 0; i < notes.length; i++) {
+//            var flow =
+
+//            '<div class="list-group">
+// 				<a class="list-group-item pjax" href="/contacts/VBMJHwcLX3Vx/notes/ucw9gtbjq7ls">
+// 					<h4 class="list-group-item-heading">1'+notes[i]+'</h4>
+// 					<p class="list-group-item-text">UX Design, le 02 décembre 2016</p>
+// 				</a>
+// 			</div>	';
+		
+// 			return flow; 
+//         }
+
+
+//     </script>	
+
 </template>
