@@ -11,7 +11,7 @@
             </div>
           
             <div class="btn-group pull-right">
-              <button class="btn btn-success" data-dismiss="modal">
+              <button class="btn btn-success" data-dismiss="modal" id="enregister">
                 Enregistrer
               </button>
             </div>
@@ -25,29 +25,30 @@
             <div class="form-group">
               <label class="col-xs-4 control-label">Note</label>
               <div class="col-xs-8">
-                <input type="text" name="note" class="form-control" placeholder="Note sur 20" value="">
+                <input id="inputNote" type="number" min="0" max="20" name="note" class="form-control" placeholder="Note sur 20" value="">
               </div>
             </div>
             <div class="form-group">
               <label class="col-xs-4 control-label">Matière</label>
               <div class="col-xs-8">
-                <input type="text" name="matiere" class="form-control" placeholder="Matière" value="">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-xs-4 control-label">Date</label>
-              <div class="col-xs-8">
-                <input type="text" name="date" class="form-control" placeholder="Date" value="">
+                <select name="select" id="inputMatiere">
+                  <option id="value1" value="JavaScript">JavaScript</option> 
+                  <option id="value2" value="PHP">PHP</option>
+                  <option id="value3" value="UX Design">UX Design</option>
+                  <option id="value4" value="UI Design">UI Design</option> 
+                  <option id="value5" value="Gestion de projet">Gestion de projet</option>
+                  <option id="value6" value="Marketing">Marketing</option>
+                </select>
               </div>
             </div>  
             <div class="form-group">
               <label class="col-xs-4 control-label">Trimestre</label>
               <div class="col-xs-8">
-                <input type="checkbox" name="trim_one" value=""> 1er trimestre
-              </div><div class="col-xs-8">
-                <input type="checkbox" name="trim_two" value=""> 2e trimestre
-              </div><div class="col-xs-8">
-                <input type="checkbox" name="trim_three" value="" style="margin-left:199px;"> 3e trimestre
+                <select name="select" id="inputTrimestre">
+                  <option id="value1" value="1">1er trimestre</option> 
+                  <option id="value2" value="2">2e trimestre</option>
+                  <option id="value3" value="3">3e trimestre</option>
+                </select>
               </div>
             </div>                
         </div>

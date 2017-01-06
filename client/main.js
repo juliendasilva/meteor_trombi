@@ -24,8 +24,59 @@ Template.contact_list.helpers({
 
 Template.notes.helpers({
   list_notes: function() {
-  	var notes = [12, 14, 9, 10];
-    return notes;
+    return notes.find();
+  }
+});
+
+Template.notes_data.helpers({
+  moyenneEleve: function(){
+  	var sum = 0;
+  	var i = 0;
+	notes.find().fetch().forEach( function(note){
+	  sum += parseInt(note.note);
+	  i ++;
+	});
+	sum /= i;
+  	return sum;
+  },
+  list_notes: function() {
+    return notes.find();
+  },
+  sumTrimestreOne: function(){
+  	var sumTrimestreOne = 0;
+  	var i = 0;
+	notes.find().fetch().forEach( function(note){
+		if (note.trimestre == 1) {
+			sumTrimestreOne += parseInt(note.note);
+	  		i ++;
+		};
+	});
+	sumTrimestreOne /= i;
+  	return sumTrimestreOne;
+  },
+  sumTrimestreTwo: function(){
+  	var sumTrimestreTwo = 0;
+  	var i = 0;
+	notes.find().fetch().forEach( function(note){
+		if (note.trimestre == 2) {
+			sumTrimestreTwo += parseInt(note.note);
+	  		i ++;
+		};
+	});
+	sumTrimestreTwo /= i;
+  	return sumTrimestreTwo;
+  },
+  sumTrimestreThree: function(){
+  	var sumTrimestreThree = 0;
+  	var i = 0;
+	notes.find().fetch().forEach( function(note){
+		if (note.trimestre == 3) {
+			sumTrimestreThree += parseInt(note.note);
+	  		i ++;
+		};
+	});
+	sumTrimestreThree /= i;
+  	return sumTrimestreThree;
   }
 });
 
@@ -40,6 +91,30 @@ Template.modal.events({
     var specialite = template.find("#specialite").value;
     eleves.insert({prenom: prenom, nom: nom, classe: classe, groupe: groupe, mail: mail, age: age, specialite})
 
+  }
+});
+
+Template.modal_note.events({
+  'click #enregister'(event, template) {
+    var note     = parseInt(template.find("#inputNote").value);
+    var matiere     = template.find("#inputMatiere option:selected").value;
+    var trimestre     = template.find("#inputTrimestre option:selected").value;
+    notes.insert({note: note, matiere: matiere, trimestre: trimestre})
+
+  }
+});
+
+Template.notes.events({
+  'click #supp'(event, template) {
+  	event.preventDefault();
+  	notes.remove(this._id);
+  }
+});
+
+Template.contact_list.events({
+  'click #suppStudent'(event, template) {
+  	event.preventDefault();
+  	eleves.remove(this._id);
   }
 });
 
