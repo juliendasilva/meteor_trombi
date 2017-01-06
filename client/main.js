@@ -94,6 +94,12 @@ Template.modal.events({
   }
 });
 
+Template.modal.rendered = function(){
+	console.log(this)
+	$(this).removeData('bs.modal');
+};
+
+
 Template.modal_note.events({
   'click #enregister'(event, template) {
     var note     = parseInt(template.find("#inputNote").value);
@@ -117,4 +123,10 @@ Template.contact_list.events({
   	eleves.remove(this._id);
   }
 });
+
+
+$('body').on('hidden.bs.modal', '.modal', function () {
+        $(this).removeData('bs.modal');
+      });
+
 
