@@ -21,6 +21,7 @@ Template.contact_list.helpers({
   }
 });
 
+
 Template.notes.helpers({
   list_notes: function() {
   	var notes = [12, 14, 9, 10];
@@ -28,9 +29,17 @@ Template.notes.helpers({
   }
 });
 
-Template.contact_list.events({
-  'click #addEleves'(event, instance) {
-    eleves.insert({})
+Template.modal.events({
+  'click #enregister'(event, template) {
+    var prenom     = template.find("#prenom").value;
+    var nom        = template.find("#nom").value;
+    var classe     = template.find("#classe").value;
+    var groupe     = template.find("#groupe").value;
+    var mail       = template.find("#mail").value;
+    var age        = template.find("#age").value;
+    var specialite = template.find("#specialite").value;
+    eleves.insert({prenom: prenom, nom: nom, classe: classe, groupe: groupe, mail: mail, age: age, specialite})
+
   }
 });
 
