@@ -1,5 +1,7 @@
 # METEOR TROMBINOSCOPE
 
+[![GuardRails badge](https://badges.production.guardrails.io/juliendasilva/meteor_trombi.svg)](https://www.guardrails.io)
+
 ## How to use ? 
 - git clone https://github.com/juliendasilva/meteor_trombi.git
 - meteor npm i
